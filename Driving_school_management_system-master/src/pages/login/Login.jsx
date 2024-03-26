@@ -15,7 +15,7 @@ const Login = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    setError(false);
+    setError(false);  
 
     signInWithEmailAndPassword(Auth, email, password)
       .then(async (userCredential) => {
@@ -74,7 +74,7 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit">Login</button>
+        <button type="submit">Login</button> 
         {error && <span>Wrong Credentials!</span>}
       </form>
     </div>
